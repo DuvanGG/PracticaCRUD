@@ -8,7 +8,9 @@ $direccion = $_POST['direccion'];
 $telefono = $_POST['telefono'];
 $correo = $_POST['correo'];
 
-$sql = "UPDATE usuarios SET nombre = ?, apellido = ?, direccion = ?, telefono = ?, correo = ?";
+$id = $_POST['id'];
+
+$sql = "UPDATE usuarios SET nombre = ? , apellido = ?, direccion = ?, telefono = ?, correo = ? WHERE id = '$id'";
 
 $stm = $conexion->prepare($sql);
 
