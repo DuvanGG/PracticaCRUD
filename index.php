@@ -54,11 +54,10 @@ $resultado_bd = mysqli_fetch_all($resultado); #busca todo, esto devuelve un arra
                 </td><td> <?php echo $datoUsuario[5]; ?></td>
 
                 <td><a class="eliminar" href="eliminar.php?id=<?php echo $datoUsuario[0]; ?>">Eliminar</a>
-            <a class="editar" href="editarUsuario.php">Editar</a></td>
+            <a class="editar" href="editarUsuario.php?id=<?php echo $datoUsuario[0]; ?>">Editar</a></td>
             </tr>
         </table>
     </div>
     <?php endforeach ?>
 </body>
-
 </html>
